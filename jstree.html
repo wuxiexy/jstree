@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jstree</title>
+    <link rel="stylesheet" href="style.min.css">
+    <style type="text/css">
+        .jstree-open > .jstree-anchor > .jstree-themeicon {
+            background-position: -260px -68px !important;
+        }
+        .jstree-default .jstree-themeicon-custom {
+            background-position: -260px -4px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="jstree_demo"></div>
+
+    <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="jstree.min.js"></script>
+    <script type="text/javascript">
+        $('#jstree_demo').jstree({
+            "core" : {
+                "animation" : 0,
+                "check_callback" : true,
+                "themes" : {
+                    "stripes" : true,
+                    "theme" : "classic",
+                    "dots" : true,
+                    "icons" : true
+                },
+                'data' : {
+                    'url' : function (node) {
+                        return node.id === '#' ?
+                            'ajax_demo_roots.json' : 'ajax_demo_children.json';     // 修改为你的路径
+                    },
+                    'data' : function (node) {
+                        return { 'id' : node.id };
+                    }
+                }
+            },
+            "types" : {
+                "#" : {
+                    "max_children" : 1,
+                    "max_depth" : 4,
+                    "valid_children" : ["root"]
+                },
+                "root" : {
+                    "icon" : "32px.png",          // 主目录的icon  修改为你的路径
+                    "valid_children" : ["default"]
+                },
+                "default" : {
+                    "valid_children" : ["default","file"]
+                },
+                "file" : {
+                    "icon" : "glyphicon glyphicon-file",
+                    "valid_children" : []
+                }
+            },
+            "plugins" : [
+                "contextmenu", "dnd", "search",
+                "state", "types", "wholerow"
+            ],
+            "contextmenu":{
+                "items":{
+
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

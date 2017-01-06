@@ -1,0 +1,81 @@
+[
+    "休闲",
+    {
+        "id" : "demo_child_1",
+        "text" : "衣服",
+        "children" : [{
+            "id" : "demo_child_2",
+            "text" : "大衣",
+            "type" : "file"
+        },{
+            "id" : "demo_child_3",
+            "text" : "裤子",
+            "children" : [{
+                "id" : "demo_child_4",
+                "text" : "裤子2",
+                "children" : [{
+                    "id" : "demo_child_5",
+                    "text" : "中裤",
+                    "children" : [{
+                        "id" : "demo_child_6",
+                        "text" : "中裤2",
+                        "children": [{
+                            "id" : "demo_child_7",
+                            "text" : "中裤3",
+                            "children": [{
+                                "id" : "demo_child_8",
+                                "text" : "中裤3中裤3中裤3",
+                                "type" : "file"
+                            }]
+                        }]
+                    }]
+                }]
+            }]
+        }]
+    },
+    {
+      "id" : "demo_child_11",
+      "text" : "衣服",
+      "children" : [{
+        "id" : "demo_child_22",
+        "text" : "大衣",
+        "type" : "file"
+      },{
+        "id" : "demo_child_33",
+        "text" : "裤子",
+        "children" : [{
+          "id" : "demo_child_44",
+          "text" : "裤子2",
+          "children" : [{
+            "id" : "demo_child_55",
+            "text" : "中裤",
+            "type" : "file"
+          }]
+        }]
+      }]
+    },
+  {
+    "id" : "demo_child_111",
+    "text" : "衣服",
+    "children" : [{
+      "id" : "demo_child_222",
+      "text" : "大衣",
+      "type" : "file"
+    },{
+      "id" : "demo_child_333",
+      "text" : "裤子",
+      "children" : [{
+        "id" : "demo_child_444",
+        "text" : "裤子2",
+        "children" : [{
+          "id" : "demo_child_555",
+          "text" : "中裤",
+          "type" : "file"
+        }]
+      }]
+    }]
+  },
+    "美食",
+    "动漫",
+    "电影"
+]
